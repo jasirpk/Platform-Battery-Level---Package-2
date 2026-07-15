@@ -1,7 +1,15 @@
 name: battery_level
 description: "Flutter plugin to get battery level of the device."
 version: 0.0.1
-homepage:
+homepage: https://github.com/jasirpk/Platform-Battery-Level---Package-2
+repository: https://github.com/jasirpk/Platform-Battery-Level---Package-2
+issue_tracker: https://github.com/jasirpk/Platform-Battery-Level---Package-2/issues
+
+topics: 
+  - flutter
+  - langchain
+  - wasm
+
 
 environment:
   sdk: ^3.12.1
@@ -16,6 +24,9 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^6.0.0
+
+
+license: MIT OR Apache-2.0  
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

@@ -1,3 +1,5 @@
 ## 0.0.1
 
-* TODO: Describe initial release.
+* Android native battery level integrated
+* MIT & Apache licence added
+
