@@ -1,38 +1,63 @@
 package com.example.battery_level
 
+import android.content.Context
+import android.os.BatteryManager
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
-import io.flutter.plugin.common.MethodChannel.MethodCallHandler
-import io.flutter.plugin.common.MethodChannel.Result
 
-/** BatteryLevelPlugin */
-class BatteryLevelPlugin :
-    FlutterPlugin,
-    MethodCallHandler {
-    // The MethodChannel that will the communication between Flutter and native Android
-    //
-    // This local reference serves to register the plugin with the Flutter Engine and unregister it
-    // when the Flutter Engine is detached from the Activity
+class BatteryLevelPlugin : FlutterPlugin, MethodChannel.MethodCallHandler {
+
     private lateinit var channel: MethodChannel
+    private lateinit var context: Context
 
-    override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
-        channel = MethodChannel(flutterPluginBinding.binaryMessenger, "battery_level")
+    override fun onAttachedToEngine(
+        flutterPluginBinding: FlutterPlugin.FlutterPluginBinding
+    ) {
+        context = flutterPluginBinding.applicationContext
+
+        channel = MethodChannel(
+            flutterPluginBinding.binaryMessenger,
+            "samples.flutter.dev/battery"
+        )
+
         channel.setMethodCallHandler(this)
     }
 
     override fun onMethodCall(
         call: MethodCall,
-        result: Result
+        result: MethodChannel.Result
     ) {
-        if (call.method == "getPlatformVersion") {
-            result.success("Android ${android.os.Build.VERSION.RELEASE}")
+        if (call.method == "battery_level") {
+            val batteryLevel = getBatteryLevel()
+
+            if (batteryLevel != -1) {
+                result.success(batteryLevel)
+            } else {
+                result.error(
+                    "UNAVAILABLE",
+                    "Battery level not available",
+                    null
+                )
+            }
         } else {
             result.notImplemented()
         }
     }
 
-    override fun onDetachedFromEngine(binding: FlutterPlugin.FlutterPluginBinding) {
+    private fun getBatteryLevel(): Int {
+        val batteryManager =
+            context.getSystemService(Context.BATTERY_SERVICE)
+                    as BatteryManager
+
+        return batteryManager.getIntProperty(
+            BatteryManager.BATTERY_PROPERTY_CAPACITY
+        )
+    }
+
+    override fun onDetachedFromEngine(
+        binding: FlutterPlugin.FlutterPluginBinding
+    ) {
         channel.setMethodCallHandler(null)
     }
 }

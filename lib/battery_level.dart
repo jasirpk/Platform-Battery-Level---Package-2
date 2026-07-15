@@ -1,8 +1,14 @@
-
-import 'battery_level_platform_interface.dart';
+import 'package:flutter/services.dart';
 
 class BatteryLevel {
-  Future<String?> getPlatformVersion() {
-    return BatteryLevelPlatform.instance.getPlatformVersion();
+  static const MethodChannel channel = MethodChannel('samples.flutter.dev/battery');
+
+  Future<int?> getBatteryLevel() async {
+    try {
+      final int? result = await channel.invokeMethod('battery_level');
+      return result;
+    } on PlatformException {
+      return null;
+    }
   }
 }

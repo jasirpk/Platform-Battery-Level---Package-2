@@ -1,5 +1,5 @@
 name: battery_level
-description: "A new Flutter plugin project."
+description: "Flutter plugin to get battery level of the device."
 version: 0.0.1
 homepage:
 
