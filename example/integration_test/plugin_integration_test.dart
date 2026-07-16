@@ -14,7 +14,7 @@ void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
   testWidgets('getBatteryLevel test', (WidgetTester tester) async {
-    final BatteryLevel battery = BatteryLevel();
+    final FlutterNativeBatteryLevel battery = FlutterNativeBatteryLevel();
     final int? level = await battery.getBatteryLevel();
     // The battery level depends on the host platform running the test, so
     // just assert that some non-empty integer is returned.

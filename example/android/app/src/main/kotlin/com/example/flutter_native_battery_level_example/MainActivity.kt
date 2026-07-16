@@ -1,4 +1,5 @@
-package com.example.flutter_native_battery_level
+package com.example.battery_level_example
+
 import android.content.Context
 import android.os.BatteryManager
 import io.flutter.embedding.android.FlutterActivity

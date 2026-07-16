@@ -30,7 +30,7 @@ class _MyWidgetState extends State<MyWidget> {
       body: Center(
         child: ElevatedButton(
           onPressed: () async {
-            final batteryLevel = await BatteryLevel().getBatteryLevel();
+            final batteryLevel = await FlutterNativeBatteryLevel().getBatteryLevel();
             if (batteryLevel != null) {
               ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Battery level: $batteryLevel%')));
             } else {
