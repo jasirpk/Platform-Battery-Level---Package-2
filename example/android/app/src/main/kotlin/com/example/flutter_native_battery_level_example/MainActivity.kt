@@ -1,4 +1,4 @@
-package com.example.battery_level_example
+package com.example.flutter_native_battery_level
 import android.content.Context
 import android.os.BatteryManager
 import io.flutter.embedding.android.FlutterActivity
@@ -17,7 +17,7 @@ class MainActivity : FlutterActivity() {
             CHANNEL
         ).setMethodCallHandler { call, result ->
 
-            if (call.method == "battery_level") {
+            if (call.method == "flutter_native_battery_level") {
                 val batteryLevel = getBatteryLevel()
 
                 if (batteryLevel != -1) {

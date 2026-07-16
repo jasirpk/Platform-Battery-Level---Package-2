@@ -5,7 +5,7 @@ class BatteryLevel {
 
   Future<int?> getBatteryLevel() async {
     try {
-      final int? result = await channel.invokeMethod('battery_level');
+      final int? result = await channel.invokeMethod('flutter_native_battery_level');
       return result;
     } on PlatformException {
       return null;

@@ -1,8 +1,7 @@
 // ignore_for_file: use_build_context_synchronously
 
-
-import 'package:battery_level_example/services.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_native_battery_level/flutter_native_battery_level.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,9 +12,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: MyWidget(),
-    );
+    return MaterialApp(home: MyWidget());
   }
 }
 
@@ -35,13 +32,9 @@ class _MyWidgetState extends State<MyWidget> {
           onPressed: () async {
             final batteryLevel = await BatteryLevel().getBatteryLevel();
             if (batteryLevel != null) {
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(content: Text('Battery level: $batteryLevel%')),
-              );
+              ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Battery level: $batteryLevel%')));
             } else {
-              ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(content: Text('Failed to get battery level')),
-              );
+              ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Failed to get battery level')));
             }
           },
           child: const Text('Get Battery Level'),

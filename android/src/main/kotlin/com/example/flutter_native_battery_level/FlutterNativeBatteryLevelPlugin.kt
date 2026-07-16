@@ -1,12 +1,11 @@
-package com.example.battery_level
-
+package com.example.flutter_native_battery_level
 import android.content.Context
 import android.os.BatteryManager
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
 
-class BatteryLevelPlugin : FlutterPlugin, MethodChannel.MethodCallHandler {
+class FlutterNativeBatteryLevelPlugin : FlutterPlugin, MethodChannel.MethodCallHandler {
 
     private lateinit var channel: MethodChannel
     private lateinit var context: Context
@@ -28,7 +27,7 @@ class BatteryLevelPlugin : FlutterPlugin, MethodChannel.MethodCallHandler {
         call: MethodCall,
         result: MethodChannel.Result
     ) {
-        if (call.method == "battery_level") {
+        if (call.method == "flutter_native_battery_level") {
             val batteryLevel = getBatteryLevel()
 
             if (batteryLevel != -1) {

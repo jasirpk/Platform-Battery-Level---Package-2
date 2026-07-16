@@ -1,4 +1,4 @@
-group = "com.example.battery_level"
+group = "com.example.flutter_native_battery_level"
 version = "1.0-SNAPSHOT"
 
 buildscript {
@@ -26,7 +26,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.battery_level"
+    namespace = "com.example.flutter_native_battery_level"
 
     compileSdk = 36
 

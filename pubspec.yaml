@@ -1,4 +1,4 @@
-name: battery_level
+name: flutter_native_battery_level
 description: "Flutter plugin to get battery level of the device."
 version: 0.0.1
 homepage: https://github.com/jasirpk/Platform-Battery-Level---Package-2
@@ -46,10 +46,10 @@ flutter:
   plugin:
     platforms:
       android:
-        package: com.example.battery_level
-        pluginClass: BatteryLevelPlugin
+        package: com.example.flutter_native_battery_level
+        pluginClass: FlutterNativeBatteryLevelPlugin
       ios:
-        pluginClass: BatteryLevelPlugin
+        pluginClass: FlutterNativeBatteryLevelPlugin
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:
