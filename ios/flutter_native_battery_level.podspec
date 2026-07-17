@@ -3,17 +3,17 @@
 # Run `pod lib lint battery_level.podspec` to validate before publishing.
 #
 Pod::Spec.new do |s|
-  s.name             = 'battery_level'
-  s.version          = '0.0.1'
-  s.summary          = 'A new Flutter plugin project.'
+  s.name             = 'flutter_native_battery_level'
+  s.version          = '0.0.2'
+  s.summary          = 'Flutter plugin for retrieving native device battery level.'
   s.description      = <<-DESC
-A new Flutter plugin project.
+Flutter plugin for retrieving native device battery level on Android and iOS using Method Channels.
                        DESC
-  s.homepage         = 'http://example.com'
+  s.homepage         = 'https://github.com/jasirpk/Platform-Battery-Level---Package-2'
   s.license          = { :file => '../LICENSE' }
-  s.author           = { 'Your Company' => 'email@example.com' }
+  s.author           = { 'jasir pk' => 'jasir.techofficial@gamil.com' }
   s.source           = { :path => '.' }
-  s.source_files = 'battery_level/Sources/battery_level/**/*'
+  s.source_files = 'flutter_native_battery_level/Sources/flutter_native_battery_level/**/*'
   s.dependency 'Flutter'
   s.platform = :ios, '13.0'
 

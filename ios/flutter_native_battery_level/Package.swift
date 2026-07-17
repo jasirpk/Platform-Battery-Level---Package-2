@@ -4,19 +4,19 @@
 import PackageDescription
 
 let package = Package(
-    name: "battery_level",
+    name: "flutter_native_battery_level",
     platforms: [
         .iOS("13.0")
     ],
     products: [
-        .library(name: "battery-level", targets: ["battery_level"])
+        .library(name: "flutter-native-battery-level", targets: ["flutter_native_battery_level"])
     ],
     dependencies: [
         .package(name: "FlutterFramework", path: "../FlutterFramework")
     ],
     targets: [
         .target(
-            name: "battery_level",
+            name: "flutter_native_battery_level",
             dependencies: [
                 .product(name: "FlutterFramework", package: "FlutterFramework")
             ],

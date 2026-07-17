@@ -1,15 +1,16 @@
-# battery_level
+# flutter_native_battery_level
 
-A new Flutter plugin project.
+A Flutter plugin for retrieving the native device battery level on Android and iOS using Method Channels.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/to/develop-plugins),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+- ✅ Android support
+- ✅ iOS support
+- ✅ Native platform integration
+- ✅ Simple API
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Installation
 
+```yaml
+dependencies:
+  flutter_native_battery_level: ^0.1.1
