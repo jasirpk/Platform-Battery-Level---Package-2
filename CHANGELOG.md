@@ -7,3 +7,5 @@
 * Added support for retrieving native device battery level on iOS.
 * Implemented platform communication using Flutter Method Channels.
 
+## 0.0.2+1
+* version mismatch cleared

@@ -13,4 +13,4 @@ A Flutter plugin for retrieving the native device battery level on Android and i
 
 ```yaml
 dependencies:
-  flutter_native_battery_level: ^0.0.2
+  flutter_native_battery_level: ^0.0.2+1
