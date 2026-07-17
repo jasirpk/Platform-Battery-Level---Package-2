@@ -3,7 +3,7 @@
 * Android native battery level integrated
 * MIT & Apache License added
 
-## 0.1.1
+## 0.0.2
 * Added support for retrieving native device battery level on iOS.
 * Implemented platform communication using Flutter Method Channels.
 
