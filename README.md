@@ -15,8 +15,32 @@ Add the dependency to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  flutter_native_battery_level: ^0.1.0
+  flutter_native_battery_level: ^0.1.1
 ````
+
+## Usage
+
+Import the package:
+
+```dart
+import 'package:flutter_native_battery_level/flutter_native_battery_level.dart';
+```
+
+Create an instance of the plugin and retrieve the battery level:
+
+```dart
+final batteryLevel = FlutterNativeBatteryLevel();
+
+Future<void> getBatteryLevel() async {
+  try {
+    final int? level = await batteryLevel.getBatteryLevel();
+    print('Battery Level: $level%');
+  } catch (e) {
+    print('Failed to get battery level: $e');
+  }
+}
+```
+
 
 ## 📸 Screenshots
 

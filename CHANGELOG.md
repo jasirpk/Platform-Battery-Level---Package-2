@@ -13,3 +13,6 @@
 ## 0.1.0
 * sample UI updated
 * screenshot added
+
+## 0.1.1
+* usage added
