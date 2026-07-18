@@ -9,3 +9,7 @@
 
 ## 0.0.2+1
 * version mismatch cleared
+
+## 0.1.0
+* sample UI updated
+* screenshot added

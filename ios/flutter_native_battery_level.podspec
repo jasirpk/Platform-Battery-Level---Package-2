@@ -4,7 +4,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'flutter_native_battery_level'
-  s.version          = '0.0.2+1'
+  s.version          = '0.1.0'
   s.summary          = 'Flutter plugin for retrieving native device battery level.'
   s.description      = <<-DESC
 Flutter plugin for retrieving native device battery level on Android and iOS using Method Channels.
